@@ -1,27 +1,58 @@
 package assi3;
 
 public class Product {
-    int iD;
-    String nameProduct;
-    int qTy;
-    int price;
+//id, productName, qty (số lượng), price ( giá)
 
-    public Product() {
+    int id;
+    String productName;
+    int qty;
+    double price;
+
+    public Product(){
+
     }
 
-    public int getqTy() {
-        return qTy;
+    public int getId() {
+        return id;
     }
 
-    public void setqTy(int qTy) {
-        this.qTy = qTy;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void kiemTra(){
-        if (getqTy()>0){
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public boolean checkQty(){
+        if (qty>0){
             System.out.println(" con hang");
-        }else {
-            System.out.println(" het hang ");
+            return true;
         }
+        System.out.println(" het hang");
+        return false;
     }
+
+
+
 }
