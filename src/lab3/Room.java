@@ -7,6 +7,25 @@ public class Room {
     String position;
     ArrayList<String> users ;
 
+    public void addUser(String u){
+        users.add(u);
+    }
+
+//    public void removeUser(int index){
+//        users.remove(index);
+//    }
+
+    public void printRoom(){
+        System.out.println("Room:"+getName());
+        System.out.println("Position:"+getPosition());
+        for(String i:users){//i tương đương với users.get(i);
+            System.out.println(i);
+        }
+    }
+
+
+
+
     public Room() {
         users = new ArrayList<String>();
     }
@@ -31,19 +50,7 @@ public class Room {
 
 
 
-    public void addUser(String u){
-        users.add(u);
-    }
 
-    public void removeUser(int index){
-        users.remove(index);
-    }
 
-    public void printRoom(){
-        System.out.println("Room:"+getName());
-        System.out.println("Position:"+getPosition());
-        for(String i:users){//i tương đương với users.get(i);
-            System.out.println(i);
-        }
-    }
+
 }
