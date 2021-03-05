@@ -1,10 +1,9 @@
-package LabS5;
+package Lab5;
 
-import java.util.Date;
 import java.util.Scanner;
 
 public class Person {
-    //Tên, giới tính, ngày sinh, địa chỉ
+    //Tên, giới tính, ngày sinh, địa chỉ//
     public  String name;
     public String gender;
     public String birthday;

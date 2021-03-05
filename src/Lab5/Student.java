@@ -1,9 +1,9 @@
-package LabS5;
+package Lab5;
 
 import java.util.Scanner;
 
 public class Student extends Person  {
-    //mã sv, điểm thi, email
+    //
 
     int maSv;
     float mark;
