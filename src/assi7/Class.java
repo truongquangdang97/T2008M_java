@@ -40,13 +40,13 @@ public class Class extends SinhVien implements QuanLi{
 
         for (SinhVien s:list){
             if (s.getiD()==i){
-                System.out.println("nhap ten");
+                System.out.println("Nhập tên : ");
                 setName(sc.nextLine());
-                System.out.println("nhao dia chi");
+                System.out.println("Nhập địa chỉ :");
                 setAddress(sc.nextLine());
-                System.out.println("nhao tuoi");
+                System.out.println("Nhập tuổi : ");
                 setAge(sc.nextInt());
-                System.out.println("nhap diem TB");
+                System.out.println("Nhập điểm TB");
                 setGpa(sc.nextInt());
                 return;
             }
