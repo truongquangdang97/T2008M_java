@@ -20,6 +20,8 @@ public class Student implements Serializable{
 
     public void input(){
         Scanner scanner = new Scanner(System.in);
+
+
         System.out.println("Nhap id:");
         id = scanner.nextLine();
         System.out.println("Nhap ten:");

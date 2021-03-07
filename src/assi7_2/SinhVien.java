@@ -1,36 +1,16 @@
-package assi7;
-
-import java.util.Scanner;
+package assi7_2;
 
 public class SinhVien {
+    // id, name, age, address và gpa (điểm trung bình).
     int iD;
     String name;
     int age;
     String address;
     int gpa;
 
-
-
-    public void input(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("nhap ten");
-        setName(sc.nextLine());
-        System.out.println("nhao dia chi");
-        setAddress(sc.nextLine());
-        System.out.println("nhap id");
-        setiD(sc.nextInt());
-        System.out.println("nhao tuoi");
-        setAge(sc.nextInt());
-        System.out.println("nhap diem TB");
-        setGpa(sc.nextInt());
-
-
-    }
-
-
-
     public SinhVien() {
     }
+
     public SinhVien(int iD, String name, int age, String address, int gpa) {
         this.iD = iD;
         this.name = name;

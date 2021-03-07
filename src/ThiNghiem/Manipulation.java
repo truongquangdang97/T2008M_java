@@ -9,7 +9,7 @@ public class Manipulation {
 
     public void addStudent() {
         System.out.print("Nhap so sinh vien can them: ");
-        int n = Integer.parseInt(scanner.nextLine());
+        int n = scanner.nextInt();
         for (int i = 0; i < n; i++) {
             Student student = new Student();
             student.input();
@@ -67,29 +67,7 @@ public class Manipulation {
     }
 
 
-    public void saveStudent() {
-        FileOutputStream fos = null;                         // khai báo nhập dữ liệu vào cho file
-        ObjectOutputStream oos = null;                      // khai báo nhập dữ liệu vào cho đối tượng
-        try {
-            fos = new FileOutputStream("student.txt");   //tạo 1 file có tên là student.txt
-            oos = new ObjectOutputStream(fos);
-            oos.writeObject(list);               // truyền dữ liệu vào cho file
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (oos != null) {
-                try {
-                    oos.close();                 // đóng ....         (bắt buộc phải đóng nếu như có dữ liệu truyền vào)
-                    fos.close();                  //đóng file.        (bắt buộc phải đóng nếu như có dữ liệu truyền vào)
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
 
     public void showStudent() {
         FileInputStream fis = null;                   // khai báo hiển thị dữ liệu của file

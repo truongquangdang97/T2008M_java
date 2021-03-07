@@ -1,18 +1,48 @@
 package assi7;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
-        Class c= new Class();
-        c.addStudent(1,"a",24,"Thai Binh",9);
-        c.addStudent(2,"d",24,"Nam dinh",7);
-        c.addStudent(3,"c",24,"Hai Phong",8);
-        c.addStudent(4,"b",24,"binh duong",9);
-//        c.editStudent(4);
-//        c.deleteStudent(2);
-//        c.showStuden();
-//        c.sortGpa();
-        c.sortName();
-        System.out.println("Sau khi dc sap xep  lai ://////////////////////////");
-        c.showStuden();
+        Class c = new Class();
+        Scanner sc = new Scanner(System.in);
+        int choose;
+
+
+        do {
+            Menu();
+            System.out.println("Nhập lựa chọn dưới đây :");
+            choose = sc.nextInt();
+
+            switch (choose){
+                case 1:
+                    c.addStudent();
+                    break;
+                case 2:
+                    c.editStudent();
+                    break;
+                case 3:
+                    c.deleteStudent();
+                    break;
+                case 4:
+                    c.sortGpa();
+                    break;
+                case 5:
+                    c.sortName();
+                    break;
+                case 6:
+                    c.showStuden();
+                    break;
+            }
+        }while (choose!=7);
+    }
+
+    static void Menu(){
+        System.out.println("1 Thêm sinh viên : ");
+        System.out.println("2 Chỉnh Sửa học sinh  theo id   : ");
+        System.out.println("3 Xoá một học sinh theo id ");
+        System.out.println("4 Sắp xếp học sinh theo điểm trung bình :");
+        System.out.println("5 Sắp xếp học sinh theo tên : ");
+        System.out.println("6 In Ra danh sách học sinh : ");
     }
 }

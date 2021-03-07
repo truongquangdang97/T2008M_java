@@ -35,21 +35,11 @@ public class Main {
                     manipulation.display();
                     break;
                 case 7:
-                    manipulation.saveStudent();
-                    break;
-                case 8:
                     manipulation.showStudent();
                     break;
-                case 9:
-                    System.out.println("Thoat.");
-                    break;
-                default:
-                    System.err.println("Nhap sai");
-                    break;
+//
             }
-
         } while (choose != 9);
-
     }
 
     static void showMenu() {
@@ -65,4 +55,11 @@ public class Main {
         System.out.println("9. Exit.");
         System.out.println("/****************************************/");
     }
+
+ //   case 9:
+//                    System.out.println("Thoat.");
+//                    break;
+//                default:
+//                    System.err.println("Nhap sai");
+//                    break;
 }

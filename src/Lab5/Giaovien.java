@@ -11,19 +11,25 @@ public class Giaovien extends Person {
     public void inputInfo(){
         super.inputInfo();
         Scanner sc = new Scanner(System.in);
-        System.out.println("nhap so lương :");
+        System.out.println("Tiền  lương mỗi tháng : ");
         setWage(sc.nextInt());
-        System.out.println("Nhao só lượng  giang day");
+
+
+
+        System.out.println("Số lượng giảng dạy : ");
         setAmount(sc.nextInt());
         sc.nextLine();
-        System.out.println("danh sach cac mon :");
+        System.out.println("Tên môn dạy : ");
         for (int i=0;i<amount;i++){
             danhSachMonHoc.add(sc.nextLine());
         }
-    System.out.println("so luong day");
+
+
+
+        System.out.println("Số lớp phải dạy : ");
         int sl = sc.nextInt();
         sc.nextLine();
-        System.out.println("danh sach lop");
+        System.out.println("Danh sách lớp : ");
         for (int i=0;i<sl;i++){
             danhSachLop.add(sc.nextLine());
         }
@@ -32,12 +38,12 @@ public class Giaovien extends Person {
 
     public void showInfo(){
         super.showInfo();
-        System.out.println("Nhan duoc so luong :" + getWage());
-        System.out.println("So luong giang day"+getAmount());
-        System.out.println("Cac mon hoc " );
+        System.out.println("Lương mỗi tháng nhận đc :" + getWage());
+        System.out.println("Số lượng giảng dạy : "+getAmount());
+        System.out.println("Các môn phải học : " );
         for (String s:danhSachMonHoc)
             System.out.println(s);
-        System.out.println("danh sach lop ho ");
+        System.out.println("Tên lớp học : ");
         for (String x:danhSachLop){
             System.out.println(x);
         }
@@ -45,10 +51,6 @@ public class Giaovien extends Person {
 
 
     }
-
-
-
-
 
 
 
