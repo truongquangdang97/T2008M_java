@@ -9,6 +9,7 @@ public class Giaovien extends Person {
     ArrayList<String> danhSachMonHoc;//các môn giảng dạyc;
     ArrayList<String> danhSachLop;//Danh sách lớp giảng dạy
     public void inputInfo(){
+        super.inputInfo();
         Scanner sc = new Scanner(System.in);
         System.out.println("nhap so lương :");
         setWage(sc.nextInt());
@@ -30,7 +31,7 @@ public class Giaovien extends Person {
 
 
     public void showInfo(){
-       // super.showInfo();
+        super.showInfo();
         System.out.println("Nhan duoc so luong :" + getWage());
         System.out.println("So luong giang day"+getAmount());
         System.out.println("Cac mon hoc " );
