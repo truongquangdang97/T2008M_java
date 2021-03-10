@@ -21,15 +21,29 @@ public class Class extends SinhVien implements QuanLi{
     Scanner sc = new Scanner(System.in);
 
     @Override
-    public void addStudent() {
-        System.out.println("Nhập số HS sinh muốn thêm : ");
-        int sl = sc.nextInt();
+    public void addStudent(int iD,String name,int age,String address,int gpa) {
+//        System.out.println("Nhập số HS sinh muốn thêm : ");
+//        int sl = sc.nextInt();
+//
+//        for (int i =0 ;i<sl;i++){
+//            SinhVien s = new SinhVien();
+//            s.input();
+//            list.add(s);
+//        }
 
-        for (int i =0 ;i<sl;i++){
-            SinhVien s = new SinhVien();
-            s.input();
-            list.add(s);
+        for (SinhVien s:list){
+            if (s.getiD()==iD){
+                System.out.println("ID HS đã có trong danh sách ");
+                return;
+            }
         }
+        SinhVien s = new SinhVien();
+        s.setiD(iD);
+        s.setName(name);
+        s.setAge(age);
+        s.setAddress(address);
+        s.setGpa(gpa);
+        list.add(s);
 
     }
 
@@ -37,17 +51,19 @@ public class Class extends SinhVien implements QuanLi{
     public void editStudent() {
         System.out.println("Nhập Id học sinh muốn sửa : ");
         int i = sc.nextInt();
+        sc.nextLine();
 
         for (SinhVien s:list){
             if (s.getiD()==i){
                 System.out.println("Nhập tên : ");
-                setName(sc.nextLine());
+                s.setName(sc.nextLine());
                 System.out.println("Nhập địa chỉ :");
-                setAddress(sc.nextLine());
+                s.setAddress(sc.nextLine());
                 System.out.println("Nhập tuổi : ");
-                setAge(sc.nextInt());
+                s.setAge(sc.nextInt());
                 System.out.println("Nhập điểm TB");
-                setGpa(sc.nextInt());
+                s.setGpa(sc.nextInt());
+
                 return;
             }
             else System.out.println("Id nay khôgn có trong Danh Sách học sinh : ");

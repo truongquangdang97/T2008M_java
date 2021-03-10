@@ -4,7 +4,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
+
+
         Class c = new Class();
+        c.addStudent(1,"Quang",24,"Thai Binh ",9);
+        c.addStudent(2,"Thanh",21,"Ha noi ",8);
+
+
+
         Scanner sc = new Scanner(System.in);
         int choose;
 
@@ -16,7 +23,8 @@ public class Main {
 
             switch (choose){
                 case 1:
-                    c.addStudent();
+                    c.addStudent(1,"Quang",24,"Thai Binh ",9);
+                    c.addStudent(2,"Thanh",21,"Ha noi ",8);
                     break;
                 case 2:
                     c.editStudent();
@@ -34,7 +42,7 @@ public class Main {
                     c.showStuden();
                     break;
             }
-        }while (choose!=7);
+        }while (choose!=6);
     }
 
     static void Menu(){

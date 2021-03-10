@@ -13,12 +13,16 @@ public class SinhVien {
 
     public void input(){
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("Nhập id");
+        setiD(sc.nextInt());
+        sc.nextLine();
+
         System.out.println("Nhập tên : ");
         setName(sc.nextLine());
         System.out.println("Nhập địa chỉ : ");
         setAddress(sc.nextLine());
-        System.out.println("Nhập id");
-        setiD(sc.nextInt());
+
         System.out.println("Nhập tuổi :");
         setAge(sc.nextInt());
         System.out.println("Nhập điểm TB");
