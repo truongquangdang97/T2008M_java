@@ -1,5 +1,5 @@
 package Lab6;
-
+//
 public abstract class DienThoai {
 //có các chức năng là :
     public abstract void insertPhone(String name,String phone);//Thêm Tên, Thêm SĐT

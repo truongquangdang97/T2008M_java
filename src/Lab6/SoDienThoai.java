@@ -2,7 +2,7 @@ package Lab6;
 
 import java.util.ArrayList;
 
-
+//
 public class SoDienThoai {
     public String name;
     public ArrayList<String> phone ;

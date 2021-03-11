@@ -40,10 +40,14 @@ public class KhachHang {
 
     public void checkSoLuong(){
         for (KhachHang k:list){
-           if (k.getQuocTich().equals(checkQuocTich())){
+           if (!k.getQuocTich().equals(checkQuocTich())){
+               k.setTotal(k.soLuong*2000);
+               System.out.println(("Tổng tiền là :")+k.total);
+
+           }else {
                if (k.getSoLuong()<50){
                    k.setTotal(k.getSoLuong()*1000);
-                   System.out.println("//////"+k.total);
+                   System.out.println("Tổng tiền điên là :"+k.total);
                }
                else if (k.getSoLuong()>50||k.getSoLuong()<100){
                    k.setTotal((k.soLuong-50)*1200 + 50*1000);
@@ -57,12 +61,11 @@ public class KhachHang {
                    k.setTotal(  (k.soLuong-200)*200 + (k.soLuong-100)*1500 + (k.soLuong-50)*1200 + 50*1000 );
                    System.out.println("Toongr so tien la :" +k.total);
                }
+
            }
-           else if (!k.getQuocTich().equals(checkQuocTich())){
-               k.setTotal( k.soLuong*2000);
-               System.out.println("Tổng tiền điên là : "+k.total);
-           }
+
         }
+
     }
 
 
