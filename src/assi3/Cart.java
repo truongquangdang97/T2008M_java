@@ -59,7 +59,7 @@ public class Cart {
 
     public boolean addProduct(Product pd){
         if (pd.checkQty()){
-            getProductsList().add(pd);
+            productsList.add(pd);
             pd.setQty(pd.getQty()-1);
             setGrandTotal(getGrandTotal()+pd.getPrice());
             return true;

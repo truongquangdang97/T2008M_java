@@ -21,9 +21,7 @@ public class Main {
         c1.setCustomer("truong dang quang");
         c1.setCity("HN");
         c1.addProduct(p1);
-        c1.addProduct(p1);
-        c1.addProduct(p1);
-        c1.addProduct(p2);
+
 
         Cart c2 = new Cart();
         c2.setId(1);

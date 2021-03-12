@@ -14,6 +14,9 @@ public class Room {
 //    public void removeUser(int index){
 //        users.remove(index);
 //    }
+    public void remove(String y){
+        users.remove(y);
+    }
 
     public void printRoom(){
         System.out.println("Room:"+getName());
